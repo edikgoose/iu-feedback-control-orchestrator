@@ -1,0 +1,48 @@
+exit_code: 1
+left_time: null
+lunapark_id: 638431
+lunapark_url: https://overload.yandex.net/638431
+status_code: FINISHED
+tank_msg: "Test interrupted:\n<class 'KeyboardInterrupt'>: \n  File \"/usr/local/lib/python3.8/dist-packages/yandextank/core/tankworker.py\"\
+  , line 79, in run\n    self.retcode = self.core.wait_for_finish()\n\n  File \"/usr/local/lib/python3.8/dist-packages/yandextank/core/tankcore.py\"\
+  , line 308, in wait_for_finish\n    retcode = plugin.is_test_finished()\n\n  File\
+  \ \"/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Console/plugin.py\"\
+  , line 87, in is_test_finished\n    self.__console_view = self.screen.render_screen().encode('utf-8')\n\
+  \n  File \"/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Console/screen.py\"\
+  , line 416, in render_screen\n    left_lines = self.__render_left_panel()\n\n  File\
+  \ \"/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Console/screen.py\"\
+  , line 369, in __render_left_panel\n    left_block.render()\n\n  File \"/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Console/screen.py\"\
+  , line 559, in render\n    self.top.render(expected_width=expected_width)\n\n  File\
+  \ \"/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Console/screen.py\"\
+  , line 560, in render\n    self.bottom.render(expected_width=expected_width)\n\n\
+  \  File \"/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Console/screen.py\"\
+  , line 526, in render\n    self.left.render(expected_width=expected_width)\n\n \
+  \ File \"/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Console/screen.py\"\
+  , line 695, in render\n    data = self.__calc_percentiles()\n\n  File \"/usr/local/lib/python3.8/dist-packages/yandextank/plugins/Console/screen.py\"\
+  , line 675, in __calc_percentiles\n    last_1m = last_1m.add(data, fill_value=0)\n\
+  \n  File \"/usr/local/lib/python3.8/dist-packages/pandas/core/ops/__init__.py\"\
+  , line 165, in flex_wrapper\n    return self._binop(other, op, level=level, fill_value=fill_value)\n\
+  \n  File \"/usr/local/lib/python3.8/dist-packages/pandas/core/series.py\", line\
+  \ 2723, in _binop\n    this, other = self.align(other, level=level, join=\"outer\"\
+  , copy=False)\n\n  File \"/usr/local/lib/python3.8/dist-packages/pandas/core/series.py\"\
+  , line 4220, in align\n    return super().align(\n\n  File \"/usr/local/lib/python3.8/dist-packages/pandas/core/generic.py\"\
+  , line 8825, in align\n    return self._align_series(\n\n  File \"/usr/local/lib/python3.8/dist-packages/pandas/core/generic.py\"\
+  , line 8938, in _align_series\n    left = self._reindex_indexer(join_index, lidx,\
+  \ copy)\n\n  File \"/usr/local/lib/python3.8/dist-packages/pandas/core/series.py\"\
+  , line 4193, in _reindex_indexer\n    return self._constructor(new_values, index=new_index)\n\
+  \n  File \"/usr/local/lib/python3.8/dist-packages/pandas/core/series.py\", line\
+  \ 366, in __init__\n    data = SingleBlockManager.from_array(data, index)\n\n  File\
+  \ \"/usr/local/lib/python3.8/dist-packages/pandas/core/internals/managers.py\",\
+  \ line 1582, in from_array\n    block = make_block(array, placement=slice(0, len(index)),\
+  \ ndim=1)\n\n  File \"/usr/local/lib/python3.8/dist-packages/pandas/core/internals/blocks.py\"\
+  , line 2744, in make_block\n    klass = get_block_type(values, dtype)\n\n  File\
+  \ \"/usr/local/lib/python3.8/dist-packages/pandas/core/internals/blocks.py\", line\
+  \ 2709, in get_block_type\n    elif is_interval_dtype(dtype) or is_period_dtype(dtype):\n\
+  \n  File \"/usr/local/lib/python3.8/dist-packages/pandas/core/dtypes/common.py\"\
+  , line 496, in is_period_dtype\n    return PeriodDtype.is_dtype(arr_or_dtype)\n\n\
+  \  File \"/usr/local/lib/python3.8/dist-packages/pandas/core/dtypes/dtypes.py\"\
+  , line 942, in is_dtype\n    return super().is_dtype(dtype)\n\n  File \"/usr/local/lib/python3.8/dist-packages/pandas/core/dtypes/base.py\"\
+  , line 280, in is_dtype\n    if isinstance(dtype, (ABCSeries, ABCIndexClass, ABCDataFrame,\
+  \ np.dtype)):\n\n  File \"/usr/local/lib/python3.8/dist-packages/pandas/core/dtypes/generic.py\"\
+  , line 32, in _check\n    return getattr(inst, attr, \"_typ\") in comp\n"
+test_id: 2023-08-29_14-57-39.371188

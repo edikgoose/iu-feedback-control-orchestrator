@@ -1,0 +1,21 @@
+{
+  "name": "example",
+  "type": "client",
+  "circuit-breaker": [
+    {
+      "name": "circuit1",
+      "servers": [
+        {
+          "host": "",
+          "endpoint": "/get-hello"
+        },
+        {
+
+        }
+      ],
+    }
+    {
+    }
+  ]
+}
+
