@@ -10,6 +10,7 @@ services:
       - influx
       - grafana
 
+
   influx:
     image: influxdb:1.8
     ports:
