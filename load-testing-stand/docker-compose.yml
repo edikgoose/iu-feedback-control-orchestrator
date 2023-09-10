@@ -16,7 +16,6 @@ services:
       - "8086:8086"
     environment:
       INFLUXDB_DB: metrics
-      DOCKER_INFLUXDB_INIT_MODE:
 
   grafana:
     image: grafana/grafana:latest
@@ -30,9 +29,3 @@ services:
       GF_SECURITY_ADMIN_PASSWORD: admin
       GF_INSTALL_PLUGINS: "grafana-clock-panel,briangann-gauge-panel,natel-plotly-panel,grafana-simple-json-datasource"
       GF_AUTH_ANONYMOUS_ENABLED: "true"
-
-#  php-cli:
-#    image: php:7.2-cli
-#    volumes:
-#      - ${PWD}/tests:/var/www
-#    working_dir: /var/www

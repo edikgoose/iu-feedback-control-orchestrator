@@ -721,3 +721,12 @@
 2023-09-04 11:48:40,643	File already exists: /var/loadtest/logs/2023-09-04_11-47-26.118590/phantom_stdout_stderr_LEL7ob.log
 2023-09-04 11:48:40,644	File already exists: /var/loadtest/logs/2023-09-04_11-47-26.118590/phantom_RZa3tn.conf
 2023-09-04 11:48:40,646	File already exists: /var/loadtest/logs/2023-09-04_11-47-26.118590/phout_QB5DHe.log
+2023-09-10 11:52:59,312	Job number is not available yet
+2023-09-10 11:52:59,313	Job number is not available yet
+2023-09-10 11:52:59,320	File already exists: /var/loadtest/logs/2023-09-10_11-51-55.141675/phout_gRH7gm.log
+2023-09-10 11:52:59,322	File already exists: /var/loadtest/logs/2023-09-10_11-51-55.141675/phantom_stat_GG1s8s.log
+2023-09-10 11:52:59,324	File already exists: /var/loadtest/logs/2023-09-10_11-51-55.141675/phantom_yRdNmA.log
+2023-09-10 11:52:59,325	File already exists: /var/loadtest/logs/2023-09-10_11-51-55.141675/answ_p5pLO2.log
+2023-09-10 11:52:59,327	File not found to collect: validation_error.yaml
+2023-09-10 11:52:59,329	File already exists: /var/loadtest/logs/2023-09-10_11-51-55.141675/phantom_eLjjW5.conf
+2023-09-10 11:52:59,330	File already exists: /var/loadtest/logs/2023-09-10_11-51-55.141675/phantom_stdout_stderr_ENDutw.log
