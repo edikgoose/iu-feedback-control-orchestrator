@@ -1,0 +1,33 @@
+{
+  "name": "example",
+  "type": "client",
+  "host": "k8s-service-name",
+  "port": "80",
+  "circuit-breaker": [
+    {
+      "target-service-1": {
+        "target": "notes-service:80",
+        "enabled": true
+      },
+      "target-service-2": {
+        "target": "booking-service:80",
+        "enabled": true
+      }
+    }
+  ],
+  "retry": [
+    {
+      "target-service-1": {
+        "target": "notes-service:80",
+        "enabled": true,
+        "period": 100
+      },
+      "target-service-2": {
+        "target": "booking-service:80",
+        "enabled": true,
+        "period": 100
+      }
+    }
+  ]
+}
+

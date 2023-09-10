@@ -1,0 +1,38 @@
+version: '3.0'
+
+services:
+  tank:
+    image: direvius/yandex-tank:latest
+    network_mode: host
+    volumes:
+      - ${PWD}/tests:/var/loadtest
+    depends_on:
+      - influx
+      - grafana
+
+  influx:
+    image: influxdb:1.8
+    ports:
+      - "8086:8086"
+    environment:
+      INFLUXDB_DB: metrics
+      DOCKER_INFLUXDB_INIT_MODE:
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ${PWD}/docker/grafana/provisioning:/etc/grafana/provisioning/
+      - ${PWD}/docker/grafana/data/dashboards:/var/lib/grafana/dashboards/
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_INSTALL_PLUGINS: "grafana-clock-panel,briangann-gauge-panel,natel-plotly-panel,grafana-simple-json-datasource"
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+
+#  php-cli:
+#    image: php:7.2-cli
+#    volumes:
+#      - ${PWD}/tests:/var/www
+#    working_dir: /var/www

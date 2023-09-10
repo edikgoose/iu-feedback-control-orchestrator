@@ -1,0 +1,13 @@
+{
+  "name": "example",
+  "type": "server",
+  "host": "k8s-service-name",
+  "port": "80",
+  "rate-limit": {
+    "enabled": true,
+    "limit-group-1": 50,
+    "limit-group-2": 100,
+    "limit-group-3": 150
+  }
+}
+

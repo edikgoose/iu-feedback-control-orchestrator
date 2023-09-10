@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant Client
+participant Server
+
+box Application
+    participant Configurator
+    participant Kafka
+    participant LoadTestExecutor
+end box
+
+Client -> Configurator: Регистрация. host=client-service, port=80
+Server -> Configurator: Регистрация. host=server-service, port=80
+
+Configurator -> LoadTestExecutor: Старт теста. Передаем эндпоинт. Например, http://server-service:80/get/150
+
+LoadTestExecutor -> Kafka: Кладем результаты в топик
+Kafka -> Configurator: Читаем из топика результат
+
+Client -> Configurator: Собираем метрики
+Server -> Configurator: Собираем метрики
+
+@enduml
