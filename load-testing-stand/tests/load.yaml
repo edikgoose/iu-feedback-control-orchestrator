@@ -8,7 +8,7 @@ phantom:
     - /get-hello
   load_profile:
     load_type: rps
-    schedule: const(500, 1m)
+    schedule: line(5, 1000, 3m)
 
 console:
   enabled: true
@@ -18,7 +18,7 @@ telegraf:
 
 influx:
   enabled: true
-  address: host.docker.internal
+  address: localhost
   database: metrics
   tank_tag: 'mytank'
 

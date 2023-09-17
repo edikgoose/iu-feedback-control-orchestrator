@@ -730,3 +730,577 @@
 2023-09-10 11:52:59,327	File not found to collect: validation_error.yaml
 2023-09-10 11:52:59,329	File already exists: /var/loadtest/logs/2023-09-10_11-51-55.141675/phantom_eLjjW5.conf
 2023-09-10 11:52:59,330	File already exists: /var/loadtest/logs/2023-09-10_11-51-55.141675/phantom_stdout_stderr_ENDutw.log
+2023-09-10 13:52:32,428	Exception occurred:
+<class 'socket.gaierror'>: [Errno -2] Name or service not known
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 375, in run
+    self.core.plugins_configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 245, in plugins_configure
+    plugin.configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 72, in configure
+    self.phantom_config = self.phantom.config_file
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 81, in phantom
+    self._phantom.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 95, in read_config
+    stream.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 275, in read_config
+    self.address, do_test_connect, explicit_port)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 526, in resolve
+    resolved = self.lookup_fn(address_str, port)
+
+2023-09-10 13:52:32,428	Job number is not available yet
+2023-09-10 13:52:32,429	Job number is not available yet
+2023-09-10 13:52:32,431	File already exists: /var/loadtest/logs/2023-09-10_13-52-32.346165/phantom_stat_ZqncYk.log
+2023-09-10 13:52:32,431	File already exists: /var/loadtest/logs/2023-09-10_13-52-32.346165/answ_bw1qU0.log
+2023-09-10 13:52:32,431	File not found to collect: validation_error.yaml
+2023-09-10 13:52:32,431	File already exists: /var/loadtest/logs/2023-09-10_13-52-32.346165/phout_6rdfgd.log
+2023-09-10 13:52:32,431	File already exists: /var/loadtest/logs/2023-09-10_13-52-32.346165/phantom_gZTnR2.log
+2023-09-10 13:59:21,291	Test interrupted:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='host.docker.internal', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3693b37bd0>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+<traceback object at 0x7f3693b5c290>
+2023-09-10 13:59:23,300	Exception occurred:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='host.docker.internal', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3693b371d0>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 381, in run
+    self.retcode = self.core.wait_for_finish()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 298, in __exit__
+    retcode = self.worker.core.plugins_end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 304, in plugins_end_test
+    retcode = self.job.aggregator.end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 131, in end_test
+    self._collect_data(end=True)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 104, in _collect_data
+    self.__notify_listeners(data_item, stat_item)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 140, in __notify_listeners
+    listener.on_aggregated_data(data, stats)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Influx/plugin.py", line 81, in on_aggregated_data
+    self.client.write_points(points, 's')
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 490, in write_points
+    tags=tags, protocol=protocol)
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 551, in _write_points
+    protocol=protocol
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 327, in write
+    headers=headers
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 267, in request
+    timeout=self._timeout
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+
+2023-09-10 13:59:23,305	Job number is not available yet
+2023-09-10 13:59:23,306	Job number is not available yet
+2023-09-10 13:59:23,313	File already exists: /var/loadtest/logs/2023-09-10_13-59-17.593982/phantom_uIz4im.conf
+2023-09-10 13:59:23,314	File already exists: /var/loadtest/logs/2023-09-10_13-59-17.593982/phantom_stdout_stderr_ogKhFp.log
+2023-09-10 13:59:23,314	File already exists: /var/loadtest/logs/2023-09-10_13-59-17.593982/phantom_W6EmNX.log
+2023-09-10 13:59:23,314	File already exists: /var/loadtest/logs/2023-09-10_13-59-17.593982/phantom_stat_XY4EFL.log
+2023-09-10 13:59:23,314	File not found to collect: validation_error.yaml
+2023-09-10 13:59:23,315	File already exists: /var/loadtest/logs/2023-09-10_13-59-17.593982/phout_O50JnD.log
+2023-09-10 13:59:23,315	File already exists: /var/loadtest/logs/2023-09-10_13-59-17.593982/answ_RlGdsi.log
+2023-09-10 14:01:36,671	Job number is not available yet
+2023-09-10 14:01:36,671	Job number is not available yet
+2023-09-10 14:01:36,672	File already exists: /var/loadtest/logs/2023-09-10_14-00-26.006070/phantom_FnvKNa.conf
+2023-09-10 14:01:36,672	File already exists: /var/loadtest/logs/2023-09-10_14-00-26.006070/phantom_xqZRVo.log
+2023-09-10 14:01:36,672	File already exists: /var/loadtest/logs/2023-09-10_14-00-26.006070/phout_g0ADO2.log
+2023-09-10 14:01:36,673	File already exists: /var/loadtest/logs/2023-09-10_14-00-26.006070/phantom_stdout_stderr_6DFOVN.log
+2023-09-10 14:01:36,673	File already exists: /var/loadtest/logs/2023-09-10_14-00-26.006070/answ_NIMQQ9.log
+2023-09-10 14:01:36,673	File not found to collect: validation_error.yaml
+2023-09-10 14:01:36,673	File already exists: /var/loadtest/logs/2023-09-10_14-00-26.006070/phantom_stat_vCNA56.log
+2023-09-10 14:53:18,548	Job number is not available yet
+2023-09-10 14:53:18,548	Job number is not available yet
+2023-09-10 14:53:18,550	File already exists: /var/loadtest/logs/2023-09-10_14-52-05.802257/answ_eipNhF.log
+2023-09-10 14:53:18,550	File already exists: /var/loadtest/logs/2023-09-10_14-52-05.802257/phantom_Rc7iAE.conf
+2023-09-10 14:53:18,550	File already exists: /var/loadtest/logs/2023-09-10_14-52-05.802257/phout_hwrd1V.log
+2023-09-10 14:53:18,551	File already exists: /var/loadtest/logs/2023-09-10_14-52-05.802257/phantom_stat_Ve60tV.log
+2023-09-10 14:53:18,551	File already exists: /var/loadtest/logs/2023-09-10_14-52-05.802257/phantom_8u2T9d.log
+2023-09-10 14:53:18,551	File already exists: /var/loadtest/logs/2023-09-10_14-52-05.802257/phantom_stdout_stderr_pYN6nI.log
+2023-09-10 14:53:18,551	File not found to collect: validation_error.yaml
+2023-09-10 14:56:41,848	Job number is not available yet
+2023-09-10 14:56:41,848	Job number is not available yet
+2023-09-10 14:56:41,850	File already exists: /var/loadtest/logs/2023-09-10_14-55-28.313524/phout_q0K45A.log
+2023-09-10 14:56:41,850	File already exists: /var/loadtest/logs/2023-09-10_14-55-28.313524/answ_0v7H19.log
+2023-09-10 14:56:41,850	File already exists: /var/loadtest/logs/2023-09-10_14-55-28.313524/phantom_xi6xrT.log
+2023-09-10 14:56:41,851	File already exists: /var/loadtest/logs/2023-09-10_14-55-28.313524/phantom_stat_Hd2_P2.log
+2023-09-10 14:56:41,851	File not found to collect: validation_error.yaml
+2023-09-10 14:56:41,851	File already exists: /var/loadtest/logs/2023-09-10_14-55-28.313524/phantom_stdout_stderr_VFaoPu.log
+2023-09-10 14:56:41,851	File already exists: /var/loadtest/logs/2023-09-10_14-55-28.313524/phantom_7vA70v.conf
+2023-09-10 15:07:27,559	Job number is not available yet
+2023-09-10 15:07:27,559	Job number is not available yet
+2023-09-10 15:07:27,560	File already exists: /var/loadtest/logs/2023-09-10_15-06-15.963229/phantom_NLx1nA.conf
+2023-09-10 15:07:27,560	File already exists: /var/loadtest/logs/2023-09-10_15-06-15.963229/phantom_CKuEts.log
+2023-09-10 15:07:27,561	File already exists: /var/loadtest/logs/2023-09-10_15-06-15.963229/phantom_stdout_stderr_GsSMC6.log
+2023-09-10 15:07:27,561	File already exists: /var/loadtest/logs/2023-09-10_15-06-15.963229/phantom_stat_crk0zb.log
+2023-09-10 15:07:27,561	File already exists: /var/loadtest/logs/2023-09-10_15-06-15.963229/phout_PGbbjV.log
+2023-09-10 15:07:27,561	File already exists: /var/loadtest/logs/2023-09-10_15-06-15.963229/answ_Bfn6pa.log
+2023-09-10 15:07:27,561	File not found to collect: validation_error.yaml
+2023-09-10 15:08:12,345	Test interrupted:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='influx', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff9050ca950>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+<traceback object at 0x7ff9050ea248>
+2023-09-10 15:08:14,309	Exception occurred:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='influx', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff9050cad90>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 381, in run
+    self.retcode = self.core.wait_for_finish()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 298, in __exit__
+    retcode = self.worker.core.plugins_end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 304, in plugins_end_test
+    retcode = self.job.aggregator.end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 131, in end_test
+    self._collect_data(end=True)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 104, in _collect_data
+    self.__notify_listeners(data_item, stat_item)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 140, in __notify_listeners
+    listener.on_aggregated_data(data, stats)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Influx/plugin.py", line 81, in on_aggregated_data
+    self.client.write_points(points, 's')
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 490, in write_points
+    tags=tags, protocol=protocol)
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 551, in _write_points
+    protocol=protocol
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 327, in write
+    headers=headers
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 267, in request
+    timeout=self._timeout
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+
+2023-09-10 15:08:14,311	Job number is not available yet
+2023-09-10 15:08:14,311	Job number is not available yet
+2023-09-10 15:08:14,314	File already exists: /var/loadtest/logs/2023-09-10_15-08-08.697658/answ_yoSZ0F.log
+2023-09-10 15:08:14,314	File already exists: /var/loadtest/logs/2023-09-10_15-08-08.697658/phantom_ohradf.log
+2023-09-10 15:08:14,315	File already exists: /var/loadtest/logs/2023-09-10_15-08-08.697658/phantom_stat_0wl0oA.log
+2023-09-10 15:08:14,315	File not found to collect: validation_error.yaml
+2023-09-10 15:08:14,315	File already exists: /var/loadtest/logs/2023-09-10_15-08-08.697658/phantom_yic6Cg.conf
+2023-09-10 15:08:14,315	File already exists: /var/loadtest/logs/2023-09-10_15-08-08.697658/phout_kcnkAe.log
+2023-09-10 15:08:14,315	File already exists: /var/loadtest/logs/2023-09-10_15-08-08.697658/phantom_stdout_stderr_jm5qlQ.log
+2023-09-10 15:14:20,596	Interrupting
+2023-09-10 15:14:22,643	Job number is not available yet
+2023-09-10 15:14:22,643	Job number is not available yet
+2023-09-10 15:14:22,644	File already exists: /var/loadtest/logs/2023-09-10_15-13-20.465052/phantom_stat_FB2Tnu.log
+2023-09-10 15:14:22,644	File already exists: /var/loadtest/logs/2023-09-10_15-13-20.465052/phantom_stdout_stderr_702ZNr.log
+2023-09-10 15:14:22,644	File already exists: /var/loadtest/logs/2023-09-10_15-13-20.465052/phantom_tui7vS.conf
+2023-09-10 15:14:22,644	File already exists: /var/loadtest/logs/2023-09-10_15-13-20.465052/phantom_wK35me.log
+2023-09-10 15:14:22,644	File already exists: /var/loadtest/logs/2023-09-10_15-13-20.465052/phout_056Gma.log
+2023-09-10 15:14:22,645	File not found to collect: validation_error.yaml
+2023-09-10 15:14:22,645	File already exists: /var/loadtest/logs/2023-09-10_15-13-20.465052/answ_wYbK3p.log
+2023-09-10 15:15:02,100	Test interrupted:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='load-testing-stand_influx_1', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8248727550>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+<traceback object at 0x7f824873aab8>
+2023-09-10 15:15:04,120	Exception occurred:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='load-testing-stand_influx_1', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8248727c90>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 381, in run
+    self.retcode = self.core.wait_for_finish()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 298, in __exit__
+    retcode = self.worker.core.plugins_end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 304, in plugins_end_test
+    retcode = self.job.aggregator.end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 131, in end_test
+    self._collect_data(end=True)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 104, in _collect_data
+    self.__notify_listeners(data_item, stat_item)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 140, in __notify_listeners
+    listener.on_aggregated_data(data, stats)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Influx/plugin.py", line 81, in on_aggregated_data
+    self.client.write_points(points, 's')
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 490, in write_points
+    tags=tags, protocol=protocol)
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 551, in _write_points
+    protocol=protocol
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 327, in write
+    headers=headers
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 267, in request
+    timeout=self._timeout
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+
+2023-09-10 15:15:04,121	Job number is not available yet
+2023-09-10 15:15:04,121	Job number is not available yet
+2023-09-10 15:15:04,125	File already exists: /var/loadtest/logs/2023-09-10_15-14-57.426792/phantom_stdout_stderr_PfxghG.log
+2023-09-10 15:15:04,125	File already exists: /var/loadtest/logs/2023-09-10_15-14-57.426792/phantom_stat_dEYgZa.log
+2023-09-10 15:15:04,126	File already exists: /var/loadtest/logs/2023-09-10_15-14-57.426792/phout_JXWQsZ.log
+2023-09-10 15:15:04,126	File already exists: /var/loadtest/logs/2023-09-10_15-14-57.426792/phantom_mgT4xJ.conf
+2023-09-10 15:15:04,126	File not found to collect: validation_error.yaml
+2023-09-10 15:15:04,126	File already exists: /var/loadtest/logs/2023-09-10_15-14-57.426792/phantom_N18Lc_.log
+2023-09-10 15:15:04,126	File already exists: /var/loadtest/logs/2023-09-10_15-14-57.426792/answ_ZKYa5L.log
+2023-09-10 15:16:52,523	Test interrupted:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='load-testing-stand_influx_1', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f96b6741850>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+<traceback object at 0x7f96b675f248>
+2023-09-10 15:16:54,431	Exception occurred:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='load-testing-stand_influx_1', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f96b6741750>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 381, in run
+    self.retcode = self.core.wait_for_finish()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 298, in __exit__
+    retcode = self.worker.core.plugins_end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 304, in plugins_end_test
+    retcode = self.job.aggregator.end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 131, in end_test
+    self._collect_data(end=True)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 104, in _collect_data
+    self.__notify_listeners(data_item, stat_item)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 140, in __notify_listeners
+    listener.on_aggregated_data(data, stats)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Influx/plugin.py", line 81, in on_aggregated_data
+    self.client.write_points(points, 's')
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 490, in write_points
+    tags=tags, protocol=protocol)
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 551, in _write_points
+    protocol=protocol
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 327, in write
+    headers=headers
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 267, in request
+    timeout=self._timeout
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+
+2023-09-10 15:16:54,432	Job number is not available yet
+2023-09-10 15:16:54,432	Job number is not available yet
+2023-09-10 15:16:54,437	File already exists: /var/loadtest/logs/2023-09-10_15-16-48.686414/phantom_J6Lyhs.conf
+2023-09-10 15:16:54,437	File already exists: /var/loadtest/logs/2023-09-10_15-16-48.686414/answ_DSTyq3.log
+2023-09-10 15:16:54,437	File already exists: /var/loadtest/logs/2023-09-10_15-16-48.686414/phantom_stdout_stderr_v9Z6p9.log
+2023-09-10 15:16:54,437	File already exists: /var/loadtest/logs/2023-09-10_15-16-48.686414/phantom_xpFce6.log
+2023-09-10 15:16:54,438	File already exists: /var/loadtest/logs/2023-09-10_15-16-48.686414/phout_2YBrKo.log
+2023-09-10 15:16:54,438	File not found to collect: validation_error.yaml
+2023-09-10 15:16:54,438	File already exists: /var/loadtest/logs/2023-09-10_15-16-48.686414/phantom_stat_BdtQS5.log
+2023-09-10 15:17:26,285	Test interrupted:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='load-testing-stand_influx_1', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9ff0e05910>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+<traceback object at 0x7f9ff0e0cb48>
+2023-09-10 15:17:28,170	Exception occurred:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='load-testing-stand_influx_1', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f9ff0e05750>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 381, in run
+    self.retcode = self.core.wait_for_finish()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 298, in __exit__
+    retcode = self.worker.core.plugins_end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 304, in plugins_end_test
+    retcode = self.job.aggregator.end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 131, in end_test
+    self._collect_data(end=True)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 104, in _collect_data
+    self.__notify_listeners(data_item, stat_item)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 140, in __notify_listeners
+    listener.on_aggregated_data(data, stats)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Influx/plugin.py", line 81, in on_aggregated_data
+    self.client.write_points(points, 's')
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 490, in write_points
+    tags=tags, protocol=protocol)
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 551, in _write_points
+    protocol=protocol
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 327, in write
+    headers=headers
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 267, in request
+    timeout=self._timeout
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+
+2023-09-10 15:17:28,171	Job number is not available yet
+2023-09-10 15:17:28,171	Job number is not available yet
+2023-09-10 15:17:28,175	File not found to collect: validation_error.yaml
+2023-09-10 15:17:28,175	File already exists: /var/loadtest/logs/2023-09-10_15-17-22.592711/answ_sAvuBa.log
+2023-09-10 15:17:28,175	File already exists: /var/loadtest/logs/2023-09-10_15-17-22.592711/phantom_stdout_stderr_fHoDea.log
+2023-09-10 15:17:28,176	File already exists: /var/loadtest/logs/2023-09-10_15-17-22.592711/phantom_GuAC5g.conf
+2023-09-10 15:17:28,176	File already exists: /var/loadtest/logs/2023-09-10_15-17-22.592711/phout_cGSAX3.log
+2023-09-10 15:17:28,176	File already exists: /var/loadtest/logs/2023-09-10_15-17-22.592711/phantom_RudT2m.log
+2023-09-10 15:17:28,176	File already exists: /var/loadtest/logs/2023-09-10_15-17-22.592711/phantom_stat_Wg8lqG.log
+2023-09-10 15:20:56,937	Job number is not available yet
+2023-09-10 15:20:56,937	Job number is not available yet
+2023-09-10 15:20:56,938	File already exists: /var/loadtest/logs/2023-09-10_15-19-44.023335/answ_YPFieo.log
+2023-09-10 15:20:56,938	File already exists: /var/loadtest/logs/2023-09-10_15-19-44.023335/phantom_stdout_stderr_N2mOzV.log
+2023-09-10 15:20:56,938	File already exists: /var/loadtest/logs/2023-09-10_15-19-44.023335/phantom_stat_IS01vy.log
+2023-09-10 15:20:56,939	File not found to collect: validation_error.yaml
+2023-09-10 15:20:56,939	File already exists: /var/loadtest/logs/2023-09-10_15-19-44.023335/phantom_5jJIhC.conf
+2023-09-10 15:20:56,939	File already exists: /var/loadtest/logs/2023-09-10_15-19-44.023335/phout_h4njiD.log
+2023-09-10 15:20:56,939	File already exists: /var/loadtest/logs/2023-09-10_15-19-44.023335/phantom_smb_cE.log
+2023-09-10 15:24:49,775	Job number is not available yet
+2023-09-10 15:24:49,775	Job number is not available yet
+2023-09-10 15:24:49,777	File already exists: /var/loadtest/logs/2023-09-10_15-23-37.097760/phantom_stat_EedFMx.log
+2023-09-10 15:24:49,777	File already exists: /var/loadtest/logs/2023-09-10_15-23-37.097760/phout_Hw5xmY.log
+2023-09-10 15:24:49,777	File already exists: /var/loadtest/logs/2023-09-10_15-23-37.097760/answ_zrqhWg.log
+2023-09-10 15:24:49,777	File not found to collect: validation_error.yaml
+2023-09-10 15:24:49,777	File already exists: /var/loadtest/logs/2023-09-10_15-23-37.097760/phantom_Hw0gY_.log
+2023-09-10 15:24:49,777	File already exists: /var/loadtest/logs/2023-09-10_15-23-37.097760/phantom_stdout_stderr_a6ckmo.log
+2023-09-10 15:24:49,778	File already exists: /var/loadtest/logs/2023-09-10_15-23-37.097760/phantom_frduYa.conf
+2023-09-10 15:28:02,928	Interrupting
+2023-09-10 15:28:05,079	Job number is not available yet
+2023-09-10 15:28:05,079	Job number is not available yet
+2023-09-10 15:28:05,081	File already exists: /var/loadtest/logs/2023-09-10_15-27-08.445451/phantom_stdout_stderr_VQgRgr.log
+2023-09-10 15:28:05,081	File not found to collect: validation_error.yaml
+2023-09-10 15:28:05,082	File already exists: /var/loadtest/logs/2023-09-10_15-27-08.445451/phantom_stat_S0tL_d.log
+2023-09-10 15:28:05,082	File already exists: /var/loadtest/logs/2023-09-10_15-27-08.445451/answ_r71CkN.log
+2023-09-10 15:28:05,082	File already exists: /var/loadtest/logs/2023-09-10_15-27-08.445451/phantom_59VBfQ.log
+2023-09-10 15:28:05,083	File already exists: /var/loadtest/logs/2023-09-10_15-27-08.445451/phantom_RNobY0.conf
+2023-09-10 15:28:05,083	File already exists: /var/loadtest/logs/2023-09-10_15-27-08.445451/phout_zQCLUT.log
+2023-09-10 15:28:25,164	Interrupting
+2023-09-10 15:28:27,362	Job number is not available yet
+2023-09-10 15:28:27,362	Job number is not available yet
+2023-09-10 15:28:27,363	File already exists: /var/loadtest/logs/2023-09-10_15-28-10.826597/phantom_stat_oEklgD.log
+2023-09-10 15:28:27,363	File already exists: /var/loadtest/logs/2023-09-10_15-28-10.826597/phout_hX4prM.log
+2023-09-10 15:28:27,363	File already exists: /var/loadtest/logs/2023-09-10_15-28-10.826597/answ_luazHA.log
+2023-09-10 15:28:27,363	File already exists: /var/loadtest/logs/2023-09-10_15-28-10.826597/phantom_kWfW0Z.conf
+2023-09-10 15:28:27,364	File not found to collect: validation_error.yaml
+2023-09-10 15:28:27,364	File already exists: /var/loadtest/logs/2023-09-10_15-28-10.826597/phantom_6T5ohr.log
+2023-09-10 15:28:27,364	File already exists: /var/loadtest/logs/2023-09-10_15-28-10.826597/phantom_stdout_stderr_k8wKeS.log
+2023-09-10 15:29:04,667	Interrupting
+2023-09-10 15:29:06,743	Job number is not available yet
+2023-09-10 15:29:06,743	Job number is not available yet
+2023-09-10 15:29:06,744	File already exists: /var/loadtest/logs/2023-09-10_15-28-40.187566/phantom_stat_2cNGRR.log
+2023-09-10 15:29:06,744	File already exists: /var/loadtest/logs/2023-09-10_15-28-40.187566/phantom_stdout_stderr_mHmlHc.log
+2023-09-10 15:29:06,744	File already exists: /var/loadtest/logs/2023-09-10_15-28-40.187566/phantom_Mn_A1p.conf
+2023-09-10 15:29:06,744	File already exists: /var/loadtest/logs/2023-09-10_15-28-40.187566/phout_6LzKCr.log
+2023-09-10 15:29:06,745	File already exists: /var/loadtest/logs/2023-09-10_15-28-40.187566/answ_LBFTGR.log
+2023-09-10 15:29:06,745	File not found to collect: validation_error.yaml
+2023-09-10 15:29:06,745	File already exists: /var/loadtest/logs/2023-09-10_15-28-40.187566/phantom_BZmRlj.log
+2023-09-10 15:29:31,900	Interrupting
+2023-09-10 15:29:34,188	Job number is not available yet
+2023-09-10 15:29:34,189	Job number is not available yet
+2023-09-10 15:29:34,190	File already exists: /var/loadtest/logs/2023-09-10_15-29-12.044546/phantom_stat_5baNeF.log
+2023-09-10 15:29:34,190	File already exists: /var/loadtest/logs/2023-09-10_15-29-12.044546/phout_zDAJpy.log
+2023-09-10 15:29:34,190	File not found to collect: validation_error.yaml
+2023-09-10 15:29:34,190	File already exists: /var/loadtest/logs/2023-09-10_15-29-12.044546/phantom_qRe2Gq.conf
+2023-09-10 15:29:34,190	File already exists: /var/loadtest/logs/2023-09-10_15-29-12.044546/phantom_oO_jwf.log
+2023-09-10 15:29:34,190	File already exists: /var/loadtest/logs/2023-09-10_15-29-12.044546/answ_a0jJL2.log
+2023-09-10 15:29:34,191	File already exists: /var/loadtest/logs/2023-09-10_15-29-12.044546/phantom_stdout_stderr_YJKAMJ.log
+2023-09-10 15:30:47,164	Interrupting
+2023-09-10 15:30:48,760	Job number is not available yet
+2023-09-10 15:30:48,760	Job number is not available yet
+2023-09-10 15:30:48,761	File already exists: /var/loadtest/logs/2023-09-10_15-30-18.310225/phantom_stdout_stderr_HQHcso.log
+2023-09-10 15:30:48,761	File already exists: /var/loadtest/logs/2023-09-10_15-30-18.310225/phantom_RGzZPq.log
+2023-09-10 15:30:48,761	File already exists: /var/loadtest/logs/2023-09-10_15-30-18.310225/phout_8wfevF.log
+2023-09-10 15:30:48,762	File already exists: /var/loadtest/logs/2023-09-10_15-30-18.310225/phantom_taOIrD.conf
+2023-09-10 15:30:48,762	File not found to collect: validation_error.yaml
+2023-09-10 15:30:48,762	File already exists: /var/loadtest/logs/2023-09-10_15-30-18.310225/answ_aYaMf7.log
+2023-09-10 15:30:48,762	File already exists: /var/loadtest/logs/2023-09-10_15-30-18.310225/phantom_stat_hblgeV.log
+2023-09-10 15:31:01,880	Test interrupted:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='load-testing-stand_influx_1', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbfd92b3850>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+<traceback object at 0x7fbfd92ce560>
+2023-09-10 15:31:03,856	Exception occurred:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='load-testing-stand_influx_1', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbfd92b3750>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 381, in run
+    self.retcode = self.core.wait_for_finish()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 298, in __exit__
+    retcode = self.worker.core.plugins_end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 304, in plugins_end_test
+    retcode = self.job.aggregator.end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 131, in end_test
+    self._collect_data(end=True)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 104, in _collect_data
+    self.__notify_listeners(data_item, stat_item)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 140, in __notify_listeners
+    listener.on_aggregated_data(data, stats)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Influx/plugin.py", line 81, in on_aggregated_data
+    self.client.write_points(points, 's')
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 490, in write_points
+    tags=tags, protocol=protocol)
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 551, in _write_points
+    protocol=protocol
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 327, in write
+    headers=headers
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 267, in request
+    timeout=self._timeout
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+
+2023-09-10 15:31:03,858	Job number is not available yet
+2023-09-10 15:31:03,858	Job number is not available yet
+2023-09-10 15:31:03,862	File already exists: /var/loadtest/logs/2023-09-10_15-30-58.086392/phout_snp4i8.log
+2023-09-10 15:31:03,862	File already exists: /var/loadtest/logs/2023-09-10_15-30-58.086392/phantom_stat_oT2x7Q.log
+2023-09-10 15:31:03,862	File already exists: /var/loadtest/logs/2023-09-10_15-30-58.086392/phantom_gs5Wpa.log
+2023-09-10 15:31:03,863	File already exists: /var/loadtest/logs/2023-09-10_15-30-58.086392/phantom_kh_pgX.conf
+2023-09-10 15:31:03,863	File not found to collect: validation_error.yaml
+2023-09-10 15:31:03,863	File already exists: /var/loadtest/logs/2023-09-10_15-30-58.086392/answ_h4E6n6.log
+2023-09-10 15:31:03,863	File already exists: /var/loadtest/logs/2023-09-10_15-30-58.086392/phantom_stdout_stderr_3dmI7C.log
+2023-09-10 15:31:44,636	Test interrupted:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='load-testing-stand_influx_1', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f745a8cb850>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+<traceback object at 0x7f745a8e8560>
+2023-09-10 15:31:46,639	Exception occurred:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='load-testing-stand_influx_1', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f745a8cb750>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution',))
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 381, in run
+    self.retcode = self.core.wait_for_finish()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 298, in __exit__
+    retcode = self.worker.core.plugins_end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 304, in plugins_end_test
+    retcode = self.job.aggregator.end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 131, in end_test
+    self._collect_data(end=True)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 104, in _collect_data
+    self.__notify_listeners(data_item, stat_item)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 140, in __notify_listeners
+    listener.on_aggregated_data(data, stats)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Influx/plugin.py", line 81, in on_aggregated_data
+    self.client.write_points(points, 's')
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 490, in write_points
+    tags=tags, protocol=protocol)
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 551, in _write_points
+    protocol=protocol
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 327, in write
+    headers=headers
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 267, in request
+    timeout=self._timeout
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+
+2023-09-10 15:31:46,643	Job number is not available yet
+2023-09-10 15:31:46,643	Job number is not available yet
+2023-09-10 15:31:46,651	File already exists: /var/loadtest/logs/2023-09-10_15-31-40.937004/phantom_Lbo5Up.log
+2023-09-10 15:31:46,651	File already exists: /var/loadtest/logs/2023-09-10_15-31-40.937004/answ_XAiZcH.log
+2023-09-10 15:31:46,651	File already exists: /var/loadtest/logs/2023-09-10_15-31-40.937004/phout_UTmu1c.log
+2023-09-10 15:31:46,651	File already exists: /var/loadtest/logs/2023-09-10_15-31-40.937004/phantom_fj1R3U.conf
+2023-09-10 15:31:46,651	File not found to collect: validation_error.yaml
+2023-09-10 15:31:46,652	File already exists: /var/loadtest/logs/2023-09-10_15-31-40.937004/phantom_stat_bzfMWG.log
+2023-09-10 15:31:46,652	File already exists: /var/loadtest/logs/2023-09-10_15-31-40.937004/phantom_stdout_stderr_qcoYx9.log
+2023-09-10 15:38:11,440	Interrupting
+2023-09-10 15:38:12,896	Job number is not available yet
+2023-09-10 15:38:12,896	Job number is not available yet
+2023-09-10 15:38:12,898	File already exists: /var/loadtest/logs/2023-09-10_15-37-48.228031/phout_2rsSgD.log
+2023-09-10 15:38:12,898	File already exists: /var/loadtest/logs/2023-09-10_15-37-48.228031/phantom_stdout_stderr_EXObpT.log
+2023-09-10 15:38:12,898	File already exists: /var/loadtest/logs/2023-09-10_15-37-48.228031/phantom_hGmsmQ.conf
+2023-09-10 15:38:12,898	File already exists: /var/loadtest/logs/2023-09-10_15-37-48.228031/answ_iJIe0K.log
+2023-09-10 15:38:12,898	File already exists: /var/loadtest/logs/2023-09-10_15-37-48.228031/phantom_voE3po.log
+2023-09-10 15:38:12,899	File not found to collect: validation_error.yaml
+2023-09-10 15:38:12,899	File already exists: /var/loadtest/logs/2023-09-10_15-37-48.228031/phantom_stat_W_v5k3.log
+2023-09-10 15:38:30,504	Interrupting
+2023-09-10 15:38:32,522	Job number is not available yet
+2023-09-10 15:38:32,522	Job number is not available yet
+2023-09-10 15:38:32,524	File already exists: /var/loadtest/logs/2023-09-10_15-38-16.009524/phantom_v9EKFZ.log
+2023-09-10 15:38:32,524	File already exists: /var/loadtest/logs/2023-09-10_15-38-16.009524/phout_OJVsRE.log
+2023-09-10 15:38:32,524	File already exists: /var/loadtest/logs/2023-09-10_15-38-16.009524/answ__K0FPf.log
+2023-09-10 15:38:32,524	File not found to collect: validation_error.yaml
+2023-09-10 15:38:32,525	File already exists: /var/loadtest/logs/2023-09-10_15-38-16.009524/phantom_stat_RRE94o.log
+2023-09-10 15:38:32,525	File already exists: /var/loadtest/logs/2023-09-10_15-38-16.009524/phantom_VfNV1Q.conf
+2023-09-10 15:38:32,525	File already exists: /var/loadtest/logs/2023-09-10_15-38-16.009524/phantom_stdout_stderr_jOTzGo.log
+2023-09-10 15:39:38,639	Job number is not available yet
+2023-09-10 15:39:38,640	Job number is not available yet
+2023-09-10 15:39:38,641	File already exists: /var/loadtest/logs/2023-09-10_15-38-36.335118/phantom_u9Xv5F.log
+2023-09-10 15:39:38,641	File already exists: /var/loadtest/logs/2023-09-10_15-38-36.335118/phantom_stdout_stderr_MweKcG.log
+2023-09-10 15:39:38,641	File already exists: /var/loadtest/logs/2023-09-10_15-38-36.335118/answ_r0Jkr5.log
+2023-09-10 15:39:38,641	File not found to collect: validation_error.yaml
+2023-09-10 15:39:38,641	File already exists: /var/loadtest/logs/2023-09-10_15-38-36.335118/phantom_stat_SNSJuD.log
+2023-09-10 15:39:38,642	File already exists: /var/loadtest/logs/2023-09-10_15-38-36.335118/phout_1tq8sA.log
+2023-09-10 15:39:38,642	File already exists: /var/loadtest/logs/2023-09-10_15-38-36.335118/phantom_mPVy4X.conf
+2023-09-10 16:06:32,520	Job number is not available yet
+2023-09-10 16:06:32,520	Job number is not available yet
+2023-09-10 16:06:32,522	File already exists: /var/loadtest/logs/2023-09-10_15-51-38.722647/answ_X18Aov.log
+2023-09-10 16:06:32,522	File already exists: /var/loadtest/logs/2023-09-10_15-51-38.722647/phantom_stat_Epn1kC.log
+2023-09-10 16:06:32,522	File already exists: /var/loadtest/logs/2023-09-10_15-51-38.722647/phantom_LLvmT5.log
+2023-09-10 16:06:32,522	File already exists: /var/loadtest/logs/2023-09-10_15-51-38.722647/phantom_stdout_stderr_w3KZ7o.log
+2023-09-10 16:06:32,523	File not found to collect: validation_error.yaml
+2023-09-10 16:06:32,523	File already exists: /var/loadtest/logs/2023-09-10_15-51-38.722647/phout_f6N14b.log
+2023-09-10 16:06:32,523	File already exists: /var/loadtest/logs/2023-09-10_15-51-38.722647/phantom_SaJblC.conf
