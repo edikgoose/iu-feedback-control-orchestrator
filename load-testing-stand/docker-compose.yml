@@ -4,6 +4,7 @@ services:
   tank:
     image: direvius/yandex-tank:latest
     network_mode: host
+    dns: 8.8.8.8
     volumes:
       - ${PWD}/tests:/var/loadtest
     depends_on:

@@ -1,14 +1,14 @@
 phantom:
-  address: 192.168.1.74:8080
+  address: 192.168.1.67:8080
   header_http: "1.1"
   headers:
-    - "[Host: 192.168.1.74]"
+    - "[Host: 192.168.1.67]"
     - "[Connection: close]"
   uris:
     - /get-hello
   load_profile:
     load_type: rps
-    schedule: const(500, 1m)
+    schedule: line(10, 1000, 1m)
 
 console:
   enabled: true
@@ -18,7 +18,7 @@ telegraf:
 
 influx:
   enabled: true
-  address: host.docker.internal
+  address: localhost
   database: metrics
   tank_tag: 'mytank'
 

@@ -1,28 +1,21 @@
-1. Written down topic of your BS thesis. It may change in the future, but you have to have a valid topic.
-    Service for running and visualizing feedback control scenarios
-2. Written down problem statement of your thesis.
-    Можно запустить сценарии для какого-то кол-ва серверов и клиентов. В качестве тестовых серверов и клиентов будут браться Вагифва и Вадим
-    Специфирую протокол общения
-    Беру код вагифа и вадима. Впиливаю поддержку общения и проверяю поддержку общения
-      Что такоЩе feedback control?
+1. BS thesis: **Service for running and visualizing feedback control scenarios**
+2. The idea of task is to create web-server for orchestrating two types of services: client and server. 
+   Both of them will implement some SRE practises. Goal of orchestrator is to provide tool for configuring tune parameters of its practises 
+   and run load-testing scenarious using these clients and servers to check how optimal to use these practises
    
-3. Preliminary list of literature and related work that you are planning to include in your thesis. Note that you will have to write the first version of Literature Review approximately by the end of September!
+   **The task can be divided into several steps:**
+   1. Learn how to run and tune yandex tank. Also how to export test results
+   2. Create a protocol of communication between orchestrator and clients. It's needed to provide api and format of messages. Clients will be able to register itself, change configuration by orchestrator and take part in load-testing. Clients will be created by Vagif and Vadim
+   3. Create and deploy a web-service for configuration clients and starting yandex tank using K8S
+   4. Conduct several testing scenarious for clients
+   
+3. List of literature and related work
     * https://sre.google/sre-book/part-I-introduction/
     * https://kubernetes.io/
     * https://yandextank.readthedocs.io/en/latest/
-    * https://habr.com/ru/articles/651653/ - K8s
+    * https://habr.com/ru/articles/651653/
     * https://kafka.apache.org/documentation/
-    * сервисы оркестрации посмотреть
-4. A link to a GitHub/GitLab/GitFlame repository where your code will be located.
-   https://github.com/edikgooose/feedback-control
-5. A link to an Overleaf or GitHub/GitLab/GitFlame repository where your thesis text will be located. You should take the up-to-date LaTeX template of the thesis from the DoE.
-   https://www.overleaf.com/project/64fe0824f81ad0cc56bfc5bd
-    На локалке лучше
-6. An agreed upon schedule of weekly meetings.
-    Done
-
-Методология
-Имплементация
-Эвалуэйшн
-
-Кол-во одновременных файловых дескрипторов, ulimit (все написать в диплом)
+    * https://developer.hashicorp.com/consul/docs
+4. Thesis code - https://github.com/edikgoose/iu-feedback-control-orchestrator
+5. Thesis text - https://github.com/edikgoose/iu-thesis
+6. Weekly meetings - 14:30, Monday

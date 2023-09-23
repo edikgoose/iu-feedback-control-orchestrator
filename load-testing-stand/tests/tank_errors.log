@@ -730,3 +730,465 @@
 2023-09-10 11:52:59,327	File not found to collect: validation_error.yaml
 2023-09-10 11:52:59,329	File already exists: /var/loadtest/logs/2023-09-10_11-51-55.141675/phantom_eLjjW5.conf
 2023-09-10 11:52:59,330	File already exists: /var/loadtest/logs/2023-09-10_11-51-55.141675/phantom_stdout_stderr_ENDutw.log
+2023-09-17 12:24:01,331	Exception occurred:
+<type 'exceptions.RuntimeError'>: All connection attempts failed for 192.168.1.74, use {phantom.connection_test: false} to disable it
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 375, in run
+    self.core.plugins_configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 245, in plugins_configure
+    plugin.configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 72, in configure
+    self.phantom_config = self.phantom.config_file
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 81, in phantom
+    self._phantom.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 95, in read_config
+    stream.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 275, in read_config
+    self.address, do_test_connect, explicit_port)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 555, in resolve
+    raise RuntimeError(msg % address_str)
+
+2023-09-17 12:24:01,341	Job number is not available yet
+2023-09-17 12:24:01,342	Job number is not available yet
+2023-09-17 12:24:01,363	File already exists: /var/loadtest/logs/2023-09-17_12-24-01.044756/phout_L58yAT.log
+2023-09-17 12:24:01,366	File already exists: /var/loadtest/logs/2023-09-17_12-24-01.044756/answ_APVO7G.log
+2023-09-17 12:24:01,370	File already exists: /var/loadtest/logs/2023-09-17_12-24-01.044756/phantom_IVJ7bD.log
+2023-09-17 12:24:01,374	File not found to collect: validation_error.yaml
+2023-09-17 12:24:01,377	File already exists: /var/loadtest/logs/2023-09-17_12-24-01.044756/phantom_stat_e_Q2V9.log
+2023-09-17 12:24:42,887	Failed to read Overload API token from token.txt
+2023-09-17 12:24:42,893	Exception occurred:
+<type 'exceptions.RuntimeError'>: API token error
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 377, in run
+    self.core.plugins_prepare_test()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 254, in plugins_prepare_test
+    plugin.prepare_test()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/DataUploader/plugin.py", line 239, in prepare_test
+    lp_job = self.lp_job
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/DataUploader/plugin.py", line 553, in lp_job
+    self._lp_job = self.__get_lp_job()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/DataUploader/plugin.py", line 569, in __get_lp_job
+    api_client = self.__get_api_client()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/DataUploader/plugin.py", line 529, in __get_api_client
+    self._api_token = self.read_token(self.get_option("token_file"))
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/DataUploader/plugin.py", line 631, in read_token
+    raise RuntimeError("API token error")
+
+2023-09-17 12:24:42,909	Job number is not available yet
+2023-09-17 12:24:42,911	Job number is not available yet
+2023-09-17 12:24:42,927	File already exists: /var/loadtest/logs/2023-09-17_12-24-40.462399/answ_L0A6j1.log
+2023-09-17 12:24:42,929	File not found to collect: validation_error.yaml
+2023-09-17 12:24:42,931	File already exists: /var/loadtest/logs/2023-09-17_12-24-40.462399/phout_1gbV8B.log
+2023-09-17 12:24:42,932	File already exists: /var/loadtest/logs/2023-09-17_12-24-40.462399/phantom_stat_3KykWE.log
+2023-09-17 12:24:42,935	File already exists: /var/loadtest/logs/2023-09-17_12-24-40.462399/phantom_yVnH64.conf
+2023-09-17 12:24:42,937	File already exists: /var/loadtest/logs/2023-09-17_12-24-40.462399/phantom_NKVoxi.log
+2023-09-17 12:25:28,515	Test interrupted:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='host.docker.internal', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x4062cc4410>: Failed to establish a new connection: [Errno 111] Connection refused',))
+<traceback object at 0x4062cac488>
+2023-09-17 12:25:30,594	Exception occurred:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='host.docker.internal', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x4062cc4b50>: Failed to establish a new connection: [Errno 111] Connection refused',))
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 381, in run
+    self.retcode = self.core.wait_for_finish()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 298, in __exit__
+    retcode = self.worker.core.plugins_end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 304, in plugins_end_test
+    retcode = self.job.aggregator.end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 131, in end_test
+    self._collect_data(end=True)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 104, in _collect_data
+    self.__notify_listeners(data_item, stat_item)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 140, in __notify_listeners
+    listener.on_aggregated_data(data, stats)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Influx/plugin.py", line 81, in on_aggregated_data
+    self.client.write_points(points, 's')
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 490, in write_points
+    tags=tags, protocol=protocol)
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 551, in _write_points
+    protocol=protocol
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 327, in write
+    headers=headers
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 267, in request
+    timeout=self._timeout
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+
+2023-09-17 12:25:31,664	File already exists: /var/loadtest/logs/2023-09-17_12-25-22.478852/phantom_elj1GB.log
+2023-09-17 12:25:31,666	File already exists: /var/loadtest/logs/2023-09-17_12-25-22.478852/phantom_stdout_stderr_blMqHE.log
+2023-09-17 12:25:31,669	File already exists: /var/loadtest/logs/2023-09-17_12-25-22.478852/phout_nUjwbT.log
+2023-09-17 12:25:31,671	File already exists: /var/loadtest/logs/2023-09-17_12-25-22.478852/phantom_stat_YwCzKR.log
+2023-09-17 12:25:31,674	File not found to collect: validation_error.yaml
+2023-09-17 12:25:31,680	File already exists: /var/loadtest/logs/2023-09-17_12-25-22.478852/phantom_TBg1lA.conf
+2023-09-17 12:25:31,681	File already exists: /var/loadtest/logs/2023-09-17_12-25-22.478852/answ_5seaAK.log
+2023-09-17 12:27:34,349	Exception occurred:
+<type 'exceptions.RuntimeError'>: All connection attempts failed for 192.168.1.67, use {phantom.connection_test: false} to disable it
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 375, in run
+    self.core.plugins_configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 245, in plugins_configure
+    plugin.configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 72, in configure
+    self.phantom_config = self.phantom.config_file
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 81, in phantom
+    self._phantom.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 95, in read_config
+    stream.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 275, in read_config
+    self.address, do_test_connect, explicit_port)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 555, in resolve
+    raise RuntimeError(msg % address_str)
+
+2023-09-17 12:27:34,361	Job number is not available yet
+2023-09-17 12:27:34,363	Job number is not available yet
+2023-09-17 12:27:34,385	File already exists: /var/loadtest/logs/2023-09-17_12-27-19.051635/phout_a8FlKK.log
+2023-09-17 12:27:34,387	File already exists: /var/loadtest/logs/2023-09-17_12-27-19.051635/phantom_RrRw52.log
+2023-09-17 12:27:34,389	File already exists: /var/loadtest/logs/2023-09-17_12-27-19.051635/answ_4sqmJL.log
+2023-09-17 12:27:34,391	File already exists: /var/loadtest/logs/2023-09-17_12-27-19.051635/phantom_stat_0h6Fdg.log
+2023-09-17 12:27:34,393	File not found to collect: validation_error.yaml
+2023-09-17 12:28:21,484	Exception occurred:
+<type 'exceptions.RuntimeError'>: All connection attempts failed for 192.168.1.67, use {phantom.connection_test: false} to disable it
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 375, in run
+    self.core.plugins_configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 245, in plugins_configure
+    plugin.configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 72, in configure
+    self.phantom_config = self.phantom.config_file
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 81, in phantom
+    self._phantom.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 95, in read_config
+    stream.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 275, in read_config
+    self.address, do_test_connect, explicit_port)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 555, in resolve
+    raise RuntimeError(msg % address_str)
+
+2023-09-17 12:28:21,494	Job number is not available yet
+2023-09-17 12:28:21,496	Job number is not available yet
+2023-09-17 12:28:21,514	File already exists: /var/loadtest/logs/2023-09-17_12-28-16.176778/phantom_stat_KKK_os.log
+2023-09-17 12:28:21,516	File already exists: /var/loadtest/logs/2023-09-17_12-28-16.176778/phout_FQopXO.log
+2023-09-17 12:28:21,517	File already exists: /var/loadtest/logs/2023-09-17_12-28-16.176778/answ_WyiYpo.log
+2023-09-17 12:28:21,519	File already exists: /var/loadtest/logs/2023-09-17_12-28-16.176778/phantom_lHTyqc.log
+2023-09-17 12:28:21,522	File not found to collect: validation_error.yaml
+2023-09-17 12:30:40,174	Exception occurred:
+<type 'exceptions.RuntimeError'>: All connection attempts failed for 192.168.1.67, use {phantom.connection_test: false} to disable it
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 375, in run
+    self.core.plugins_configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 245, in plugins_configure
+    plugin.configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 72, in configure
+    self.phantom_config = self.phantom.config_file
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 81, in phantom
+    self._phantom.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 95, in read_config
+    stream.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 275, in read_config
+    self.address, do_test_connect, explicit_port)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 555, in resolve
+    raise RuntimeError(msg % address_str)
+
+2023-09-17 12:30:40,180	Job number is not available yet
+2023-09-17 12:30:40,181	Job number is not available yet
+2023-09-17 12:30:40,196	File already exists: /var/loadtest/logs/2023-09-17_12-30-39.943257/answ_4JB1MY.log
+2023-09-17 12:30:40,197	File already exists: /var/loadtest/logs/2023-09-17_12-30-39.943257/phantom_stat_93IdDE.log
+2023-09-17 12:30:40,199	File already exists: /var/loadtest/logs/2023-09-17_12-30-39.943257/phout_ViEcro.log
+2023-09-17 12:30:40,200	File not found to collect: validation_error.yaml
+2023-09-17 12:30:40,202	File already exists: /var/loadtest/logs/2023-09-17_12-30-39.943257/phantom_bAfELC.log
+2023-09-17 12:32:55,761	Exception occurred:
+<type 'exceptions.RuntimeError'>: All connection attempts failed for 192.168.1.67, use {phantom.connection_test: false} to disable it
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 375, in run
+    self.core.plugins_configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 245, in plugins_configure
+    plugin.configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 72, in configure
+    self.phantom_config = self.phantom.config_file
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 81, in phantom
+    self._phantom.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 95, in read_config
+    stream.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 275, in read_config
+    self.address, do_test_connect, explicit_port)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 555, in resolve
+    raise RuntimeError(msg % address_str)
+
+2023-09-17 12:32:55,766	Job number is not available yet
+2023-09-17 12:32:55,767	Job number is not available yet
+2023-09-17 12:32:55,782	File already exists: /var/loadtest/logs/2023-09-17_12-32-55.525986/phout_aU8kBu.log
+2023-09-17 12:32:55,784	File already exists: /var/loadtest/logs/2023-09-17_12-32-55.525986/phantom_aF8sjz.log
+2023-09-17 12:32:55,786	File not found to collect: validation_error.yaml
+2023-09-17 12:32:55,788	File already exists: /var/loadtest/logs/2023-09-17_12-32-55.525986/answ_KNDhaS.log
+2023-09-17 12:32:55,790	File already exists: /var/loadtest/logs/2023-09-17_12-32-55.525986/phantom_stat_83wXlX.log
+2023-09-17 12:40:39,968	Exception occurred:
+<type 'exceptions.RuntimeError'>: All connection attempts failed for hello-server, use {phantom.connection_test: false} to disable it
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 375, in run
+    self.core.plugins_configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 245, in plugins_configure
+    plugin.configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 72, in configure
+    self.phantom_config = self.phantom.config_file
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 81, in phantom
+    self._phantom.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 95, in read_config
+    stream.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 275, in read_config
+    self.address, do_test_connect, explicit_port)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 555, in resolve
+    raise RuntimeError(msg % address_str)
+
+2023-09-17 12:40:39,973	Job number is not available yet
+2023-09-17 12:40:39,975	Job number is not available yet
+2023-09-17 12:40:39,991	File already exists: /var/loadtest/logs/2023-09-17_12-40-39.726203/answ_jMtHFG.log
+2023-09-17 12:40:39,992	File already exists: /var/loadtest/logs/2023-09-17_12-40-39.726203/phout_C9RilI.log
+2023-09-17 12:40:39,995	File not found to collect: validation_error.yaml
+2023-09-17 12:40:39,997	File already exists: /var/loadtest/logs/2023-09-17_12-40-39.726203/phantom_stat_ukJ2kk.log
+2023-09-17 12:40:39,998	File already exists: /var/loadtest/logs/2023-09-17_12-40-39.726203/phantom_gmRDzX.log
+2023-09-17 13:12:43,748	Exception occurred:
+<type 'exceptions.RuntimeError'>: All connection attempts failed for 192.168.1.67, use {phantom.connection_test: false} to disable it
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 375, in run
+    self.core.plugins_configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 245, in plugins_configure
+    plugin.configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 72, in configure
+    self.phantom_config = self.phantom.config_file
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 81, in phantom
+    self._phantom.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 95, in read_config
+    stream.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 275, in read_config
+    self.address, do_test_connect, explicit_port)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 555, in resolve
+    raise RuntimeError(msg % address_str)
+
+2023-09-17 13:12:43,752	Job number is not available yet
+2023-09-17 13:12:43,753	Job number is not available yet
+2023-09-17 13:12:43,767	File already exists: /var/loadtest/logs/2023-09-17_13-12-43.500060/phout_mEOoBi.log
+2023-09-17 13:12:43,769	File already exists: /var/loadtest/logs/2023-09-17_13-12-43.500060/phantom_taKVs1.log
+2023-09-17 13:12:43,770	File already exists: /var/loadtest/logs/2023-09-17_13-12-43.500060/phantom_stat_kcJEow.log
+2023-09-17 13:12:43,772	File already exists: /var/loadtest/logs/2023-09-17_13-12-43.500060/answ_0V0V2M.log
+2023-09-17 13:12:43,781	File not found to collect: validation_error.yaml
+2023-09-17 13:13:21,917	Exception occurred:
+<type 'exceptions.RuntimeError'>: All connection attempts failed for 192.168.1.67, use {phantom.connection_test: false} to disable it
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 375, in run
+    self.core.plugins_configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 245, in plugins_configure
+    plugin.configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 72, in configure
+    self.phantom_config = self.phantom.config_file
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 81, in phantom
+    self._phantom.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 95, in read_config
+    stream.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 275, in read_config
+    self.address, do_test_connect, explicit_port)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 555, in resolve
+    raise RuntimeError(msg % address_str)
+
+2023-09-17 13:13:21,922	Job number is not available yet
+2023-09-17 13:13:21,923	Job number is not available yet
+2023-09-17 13:13:21,937	File already exists: /var/loadtest/logs/2023-09-17_13-13-21.681765/phantom_hn6YxU.log
+2023-09-17 13:13:21,938	File already exists: /var/loadtest/logs/2023-09-17_13-13-21.681765/phantom_stat_9RCBsD.log
+2023-09-17 13:13:21,940	File not found to collect: validation_error.yaml
+2023-09-17 13:13:21,941	File already exists: /var/loadtest/logs/2023-09-17_13-13-21.681765/answ_4yBtuP.log
+2023-09-17 13:13:21,943	File already exists: /var/loadtest/logs/2023-09-17_13-13-21.681765/phout_EAg9E8.log
+2023-09-17 13:13:39,209	Exception occurred:
+<type 'exceptions.RuntimeError'>: All connection attempts failed for 192.168.1.67, use {phantom.connection_test: false} to disable it
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 375, in run
+    self.core.plugins_configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 245, in plugins_configure
+    plugin.configure()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 72, in configure
+    self.phantom_config = self.phantom.config_file
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/plugin.py", line 81, in phantom
+    self._phantom.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 95, in read_config
+    stream.read_config()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Phantom/utils.py", line 275, in read_config
+    self.address, do_test_connect, explicit_port)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/common/util.py", line 555, in resolve
+    raise RuntimeError(msg % address_str)
+
+2023-09-17 13:13:39,265	Job number is not available yet
+2023-09-17 13:13:39,266	Job number is not available yet
+2023-09-17 13:13:39,282	File already exists: /var/loadtest/logs/2023-09-17_13-13-38.940251/answ_m8M2LC.log
+2023-09-17 13:13:39,283	File already exists: /var/loadtest/logs/2023-09-17_13-13-38.940251/phout_UITh3K.log
+2023-09-17 13:13:39,286	File not found to collect: validation_error.yaml
+2023-09-17 13:13:39,287	File already exists: /var/loadtest/logs/2023-09-17_13-13-38.940251/phantom_vA0FVN.log
+2023-09-17 13:13:39,289	File already exists: /var/loadtest/logs/2023-09-17_13-13-38.940251/phantom_stat_JF2VDC.log
+2023-09-17 19:34:57,232	Test interrupted:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='localhost', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x4062ccc9d0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+<traceback object at 0x4062c9eea8>
+2023-09-17 19:34:59,387	Exception occurred:
+<class 'requests.exceptions.ConnectionError'>: HTTPConnectionPool(host='localhost', port=8086): Max retries exceeded with url: /write?db=metrics&precision=s (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x4062ccc310>: Failed to establish a new connection: [Errno 111] Connection refused',))
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 381, in run
+    self.retcode = self.core.wait_for_finish()
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/consoleworker.py", line 298, in __exit__
+    retcode = self.worker.core.plugins_end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/core/tankcore.py", line 304, in plugins_end_test
+    retcode = self.job.aggregator.end_test(retcode)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 131, in end_test
+    self._collect_data(end=True)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 104, in _collect_data
+    self.__notify_listeners(data_item, stat_item)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/aggregator/tank_aggregator.py", line 140, in __notify_listeners
+    listener.on_aggregated_data(data, stats)
+
+  File "/usr/local/lib/python2.7/dist-packages/yandextank/plugins/Influx/plugin.py", line 81, in on_aggregated_data
+    self.client.write_points(points, 's')
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 490, in write_points
+    tags=tags, protocol=protocol)
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 551, in _write_points
+    protocol=protocol
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 327, in write
+    headers=headers
+
+  File "/usr/local/lib/python2.7/dist-packages/influxdb/client.py", line 267, in request
+    timeout=self._timeout
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+
+  File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+
+2023-09-17 19:35:00,480	File already exists: /var/loadtest/logs/2023-09-17_19-34-51.240782/phantom_jzEIAZ.conf
+2023-09-17 19:35:00,483	File already exists: /var/loadtest/logs/2023-09-17_19-34-51.240782/phout_OPJFbt.log
+2023-09-17 19:35:00,485	File already exists: /var/loadtest/logs/2023-09-17_19-34-51.240782/answ_zQ61s2.log
+2023-09-17 19:35:00,487	File already exists: /var/loadtest/logs/2023-09-17_19-34-51.240782/phantom_stat_hSEC0X.log
+2023-09-17 19:35:00,489	File not found to collect: validation_error.yaml
+2023-09-17 19:35:00,495	File already exists: /var/loadtest/logs/2023-09-17_19-34-51.240782/phantom_yJxl9E.log
+2023-09-17 19:35:00,497	File already exists: /var/loadtest/logs/2023-09-17_19-34-51.240782/phantom_stdout_stderr_XmTshG.log
+2023-09-17 19:42:35,329	File already exists: /var/loadtest/logs/2023-09-17_19-40-30.204134/phantom_eWbAmB.conf
+2023-09-17 19:42:35,332	File already exists: /var/loadtest/logs/2023-09-17_19-40-30.204134/answ_diaiuV.log
+2023-09-17 19:42:35,334	File already exists: /var/loadtest/logs/2023-09-17_19-40-30.204134/phantom_stdout_stderr_Ve9l_w.log
+2023-09-17 19:42:35,337	File not found to collect: validation_error.yaml
+2023-09-17 19:42:35,347	File already exists: /var/loadtest/logs/2023-09-17_19-40-30.204134/phout_eBdS09.log
+2023-09-17 19:42:35,350	File already exists: /var/loadtest/logs/2023-09-17_19-40-30.204134/phantom_stat_F2kwIH.log
+2023-09-17 19:42:35,353	File already exists: /var/loadtest/logs/2023-09-17_19-40-30.204134/phantom_B3UBFr.log
+2023-09-17 19:53:26,997	File already exists: /var/loadtest/logs/2023-09-17_19-51-09.967159/answ_llGpOZ.log
+2023-09-17 19:53:27,002	File already exists: /var/loadtest/logs/2023-09-17_19-51-09.967159/phantom_liYnnW.conf
+2023-09-17 19:53:27,005	File already exists: /var/loadtest/logs/2023-09-17_19-51-09.967159/phantom_DVZ4X5.log
+2023-09-17 19:53:27,008	File already exists: /var/loadtest/logs/2023-09-17_19-51-09.967159/phantom_stdout_stderr_yWPqeh.log
+2023-09-17 19:53:27,010	File already exists: /var/loadtest/logs/2023-09-17_19-51-09.967159/phantom_stat_sPPnf9.log
+2023-09-17 19:53:27,013	File already exists: /var/loadtest/logs/2023-09-17_19-51-09.967159/phout_c8ruob.log
+2023-09-17 19:53:27,020	File not found to collect: validation_error.yaml
+2023-09-17 19:56:57,514	Interrupting
+2023-09-17 19:57:00,669	File already exists: /var/loadtest/logs/2023-09-17_19-56-47.997267/phantom_stat_qL1YRo.log
+2023-09-17 19:57:00,671	File already exists: /var/loadtest/logs/2023-09-17_19-56-47.997267/answ_9ZLSBQ.log
+2023-09-17 19:57:00,673	File already exists: /var/loadtest/logs/2023-09-17_19-56-47.997267/phout_6ccSYI.log
+2023-09-17 19:57:00,676	File not found to collect: validation_error.yaml
+2023-09-17 19:57:00,683	File already exists: /var/loadtest/logs/2023-09-17_19-56-47.997267/phantom__CUQ_w.log
+2023-09-17 19:57:00,686	File already exists: /var/loadtest/logs/2023-09-17_19-56-47.997267/phantom_stdout_stderr_vCZNhZ.log
+2023-09-17 19:57:00,687	File already exists: /var/loadtest/logs/2023-09-17_19-56-47.997267/phantom_n8yI5d.conf
+2023-09-17 19:58:28,564	Interrupting
+2023-09-17 19:58:32,124	File already exists: /var/loadtest/logs/2023-09-17_19-57-12.617480/phantom_nLPH6i.log
+2023-09-17 19:58:32,128	File already exists: /var/loadtest/logs/2023-09-17_19-57-12.617480/phantom_stat_2gU1lX.log
+2023-09-17 19:58:32,130	File already exists: /var/loadtest/logs/2023-09-17_19-57-12.617480/phantom_stdout_stderr_V5_RE0.log
+2023-09-17 19:58:32,133	File not found to collect: validation_error.yaml
+2023-09-17 19:58:32,135	File already exists: /var/loadtest/logs/2023-09-17_19-57-12.617480/answ_JJyAqr.log
+2023-09-17 19:58:32,137	File already exists: /var/loadtest/logs/2023-09-17_19-57-12.617480/phout_jmFRKJ.log
+2023-09-17 19:58:32,139	File already exists: /var/loadtest/logs/2023-09-17_19-57-12.617480/phantom__exbu_.conf
+2023-09-17 20:01:13,821	File already exists: /var/loadtest/logs/2023-09-17_19-58-49.109252/phantom_stdout_stderr_0CHRre.log
+2023-09-17 20:01:13,825	File already exists: /var/loadtest/logs/2023-09-17_19-58-49.109252/answ_6wbddH.log
+2023-09-17 20:01:13,828	File already exists: /var/loadtest/logs/2023-09-17_19-58-49.109252/phantom_stat_Flo29e.log
+2023-09-17 20:01:13,831	File already exists: /var/loadtest/logs/2023-09-17_19-58-49.109252/phantom_gAPLmu.conf
+2023-09-17 20:01:13,835	File already exists: /var/loadtest/logs/2023-09-17_19-58-49.109252/phout_ACTsWx.log
+2023-09-17 20:01:13,838	File not found to collect: validation_error.yaml
+2023-09-17 20:01:13,840	File already exists: /var/loadtest/logs/2023-09-17_19-58-49.109252/phantom_cp8Y3m.log
+2023-09-17 20:17:42,557	File already exists: /var/loadtest/logs/2023-09-17_20-15-27.373298/phantom_stat_lYYmrO.log
+2023-09-17 20:17:42,560	File already exists: /var/loadtest/logs/2023-09-17_20-15-27.373298/phout_yxgEXY.log
+2023-09-17 20:17:42,563	File already exists: /var/loadtest/logs/2023-09-17_20-15-27.373298/phantom_N6Z4J4.log
+2023-09-17 20:17:42,564	File already exists: /var/loadtest/logs/2023-09-17_20-15-27.373298/answ_je_WJg.log
+2023-09-17 20:17:42,566	File already exists: /var/loadtest/logs/2023-09-17_20-15-27.373298/phantom_7DhMOU.conf
+2023-09-17 20:17:42,569	File not found to collect: validation_error.yaml
+2023-09-17 20:17:42,575	File already exists: /var/loadtest/logs/2023-09-17_20-15-27.373298/phantom_stdout_stderr_rfTBNo.log
+2023-09-23 14:08:40,422	Interrupting
+2023-09-23 14:08:44,152	File already exists: /var/loadtest/logs/2023-09-23_14-07-24.133285/phout_7A7_qy.log
+2023-09-23 14:08:44,155	File already exists: /var/loadtest/logs/2023-09-23_14-07-24.133285/phantom_vicoh6.conf
+2023-09-23 14:08:44,158	File already exists: /var/loadtest/logs/2023-09-23_14-07-24.133285/phantom_stat_jzsxvj.log
+2023-09-23 14:08:44,160	File already exists: /var/loadtest/logs/2023-09-23_14-07-24.133285/phantom_stdout_stderr_dqNf1f.log
+2023-09-23 14:08:44,162	File already exists: /var/loadtest/logs/2023-09-23_14-07-24.133285/phantom__S7l05.log
+2023-09-23 14:08:44,165	File not found to collect: validation_error.yaml
+2023-09-23 14:08:44,171	File already exists: /var/loadtest/logs/2023-09-23_14-07-24.133285/answ_4weouA.log
